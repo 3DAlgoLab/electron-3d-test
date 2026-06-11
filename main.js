@@ -1,6 +1,8 @@
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-app.commandLine.appendSwitch('ignore-gpu-blocklist');
+
+// app.commandLine.appendSwitch('ignore-gpu-blocklist');
+app.commandLine.appendSwitch('in-process-gpu');
 
 function createWindow() {
   const win = new BrowserWindow({
